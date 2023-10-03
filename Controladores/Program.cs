@@ -30,6 +30,7 @@ namespace CajeroMenu.Controladores
                 opcionSeleccionada = mi.mostrarMenuYSeleccion();
 
                 mi.mostrarMenuYSeleccion();
+                int=1
 
                 switch(opcionSeleccionada)
                 {
