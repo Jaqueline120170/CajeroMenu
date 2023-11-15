@@ -1,4 +1,5 @@
-﻿using CajeroMenu.Servicios;
+﻿using CajeroMenu.Dtos;
+using CajeroMenu.Servicios;
 
 namespace CajeroMenu.Controladores
 {
@@ -15,9 +16,12 @@ namespace CajeroMenu.Controladores
         /// <param name="args"></param>
         static void Main(String[] args)
         {
-            
+            List<ClienteDto> listaClientes = new List<ClienteDto>();
+
             MenuInterfaz mi = new MenuImplementacion();
             mi.mostrarMensajeBienvenida();
+
+            ClienteInterfaz ci = new ClienteImplementacion();
 
             //variable que controla la entrada y salida del bucle while
             bool cerrarMenu = false;
@@ -30,7 +34,8 @@ namespace CajeroMenu.Controladores
                 opcionSeleccionada = mi.mostrarMenuYSeleccion();
 
                 mi.mostrarMenuYSeleccion();
-                int=1
+                
+
 
                 switch(opcionSeleccionada)
                 {
@@ -40,6 +45,7 @@ namespace CajeroMenu.Controladores
                         break;
                     case 1:
                         Console.WriteLine("[INFO] - Se ejecuta caso 1");
+                        ci.darAltaCliente(listaClientes);
                         break;
                     case 2:
                         Console.WriteLine("[INFO] - Se ejecuta caso 2");
