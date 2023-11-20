@@ -7,14 +7,9 @@ using System.Threading.Tasks;
 
 namespace CajeroMenu.Servicios
 {
-    internal interface ClienteInterfaz
+    internal interface CuentaInterfaz
     {
-        // metodo dar alta cliente, no devuelve nada porque es un objeto
-        public void darAltaCliente(List<ClienteDto> listaAntigua);
-
-    
-
-
-
+        public void darAltaCuenta(List<CuentasDto> listaAntigua);
     }
+
 }

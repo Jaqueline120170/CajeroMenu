@@ -29,6 +29,7 @@ namespace CajeroMenu.Servicios
             Console.WriteLine("3. Sacar dinero");
             Console.WriteLine("4. Transferir dinero");
             Console.WriteLine("5. Historial de operaciones");
+            Console.WriteLine("6. Dar de alta una cuenta bancaria");
             Console.WriteLine("################################");
             Console.WriteLine("Selecciona una opcion: ");
 

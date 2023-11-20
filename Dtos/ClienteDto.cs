@@ -42,7 +42,7 @@ namespace CajeroMenu.Dtos
 
 
         //3. Se genera el constructor que viene por defecto
-        public ClienteDto(string nombreCliente, string apellidosCliente, string dniCliente, string fechaNacimientoCliente, string emailCliente, int tlfCliente, string fechaAltaCliente)
+        public ClienteDto(string nombreCliente, string apellidosCliente, string dniCliente, string fechaNacimientoCliente, string emailCliente, int tlfCliente, string fechaAltaCliente, long idCliente)
         {
  
             this.nombreCliente = nombreCliente;
@@ -52,7 +52,7 @@ namespace CajeroMenu.Dtos
             this.emailCliente = emailCliente;
             this.tlfCliente = tlfCliente;
             this.fechaAltaCliente = fechaAltaCliente;
-            
+            this.idCliente = idCliente;
         }
 
         public ClienteDto()

@@ -17,11 +17,12 @@ namespace CajeroMenu.Controladores
         static void Main(String[] args)
         {
             List<ClienteDto> listaClientes = new List<ClienteDto>();
-
+            List<CuentasDto> listaCuentas = new List<CuentasDto>();
             MenuInterfaz mi = new MenuImplementacion();
             mi.mostrarMensajeBienvenida();
 
             ClienteInterfaz ci = new ClienteImplementacion();
+            CuentaInterfaz cui = new CuentaImplementacion();
 
             //variable que controla la entrada y salida del bucle while
             bool cerrarMenu = false;
@@ -44,6 +45,11 @@ namespace CajeroMenu.Controladores
                     case 1:
                         Console.WriteLine("[INFO] - Se ejecuta caso 1");
                         ci.darAltaCliente(listaClientes);
+                        //el valor de la referencia nde dar alta clientes pasará a lista antigua
+                        foreach (ClienteDto clienteNuevo in listaClientes)
+                        {
+                            Console.WriteLine(clienteNuevo.ToString());
+                        }
                         break;
                     case 2:
                         Console.WriteLine("[INFO] - Se ejecuta caso 2");
@@ -56,6 +62,14 @@ namespace CajeroMenu.Controladores
                         break;
                     case 5:
                         Console.WriteLine("[INFO] - Se ejecuta caso 5");
+                        break;
+                    case 6:
+                        Console.WriteLine("[INFO] - Se ejecuta caso 6");
+                        cui.darAltaCuenta(listaCuentas);
+                        foreach(CuentasDto cuentaNueva in listaCuentas)
+                        {
+                            Console.WriteLine(cuentaNueva.ToString());
+                        }
                         break;
                     default:
                         Console.WriteLine("[INFO] - La opcion seleccionada no coincide con ninguna");

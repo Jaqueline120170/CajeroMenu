@@ -14,6 +14,7 @@ namespace CajeroMenu.Servicios
         {
             listaAntigua.Add(crearNuevoCliente());
             //CREO UN CLIENTE CON UN NUEVO METODO( crearNuevoCliente)
+           
             // añadir a listaAntigua el cliente
         }
 
@@ -26,7 +27,9 @@ namespace CajeroMenu.Servicios
             string emailCliente;
             int tlfCliente;
             string fechaAltaCliente;
+            long idCliente;
 
+            
             Console.WriteLine("Introduzca su nombre");
             nombreCliente = Console.ReadLine();
             Console.WriteLine("Introduzca sus Apellidos");
@@ -41,8 +44,11 @@ namespace CajeroMenu.Servicios
             tlfCliente = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Introduzca la fecha actual");
             fechaAltaCliente = Console.ReadLine();
+            Console.WriteLine("Introduzca un id: ");
+            idCliente = Convert.ToInt64(Console.ReadLine());
 
-            ClienteDto clienteNuevo = new ClienteDto(nombreCliente, apellidosCliente, dniCliente, fechaNacimiento, emailCliente, tlfCliente, fechaAltaCliente );
+
+            ClienteDto clienteNuevo = new ClienteDto(nombreCliente, apellidosCliente, dniCliente, fechaNacimiento, emailCliente, tlfCliente, fechaAltaCliente, idCliente );
 
             return clienteNuevo;
         }
