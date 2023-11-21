@@ -28,6 +28,7 @@ namespace CajeroMenu.Servicios
             int tlfCliente;
             string fechaAltaCliente;
             long idCliente;
+            string idBanco;
 
             
             Console.WriteLine("Introduzca su nombre");
@@ -46,9 +47,10 @@ namespace CajeroMenu.Servicios
             fechaAltaCliente = Console.ReadLine();
             Console.WriteLine("Introduzca un id: ");
             idCliente = Convert.ToInt64(Console.ReadLine());
+            
 
 
-            ClienteDto clienteNuevo = new ClienteDto(nombreCliente, apellidosCliente, dniCliente, fechaNacimiento, emailCliente, tlfCliente, fechaAltaCliente, idCliente );
+            ClienteDto clienteNuevo = new ClienteDto(nombreCliente, apellidosCliente, dniCliente, fechaNacimiento, emailCliente, tlfCliente, fechaAltaCliente, idCliente);
 
             return clienteNuevo;
         }

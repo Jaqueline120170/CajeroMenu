@@ -23,6 +23,8 @@ namespace CajeroMenu.Servicios
             string fechaAltaCuenta;
             string fechaBajaCuenta;
             string dniCliente;
+            string idBanco;
+
 
             Console.WriteLine("Introduzca un id: ");
             idCliente = Convert.ToInt64(Console.ReadLine());
@@ -34,8 +36,10 @@ namespace CajeroMenu.Servicios
             fechaBajaCuenta = Console.ReadLine();
             Console.WriteLine("Introduzca su DNI");
             dniCliente = Console.ReadLine();
+            Console.WriteLine("Introduzca el id del Banco al que pertenece");
+            idBanco = Console.ReadLine();
 
-            CuentasDto cuentaNueva = new CuentasDto(idCliente, numISBAN, fechaAltaCuenta, fechaBajaCuenta,dniCliente);
+            CuentasDto cuentaNueva = new CuentasDto(idCliente, numISBAN, fechaAltaCuenta, fechaBajaCuenta,dniCliente, idBanco);
             return cuentaNueva;
         }
     }
