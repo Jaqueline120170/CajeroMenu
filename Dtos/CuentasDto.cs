@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace CajeroMenu.Dtos
 {
+    /// <summary>
+    /// Entidad de las ccc, representa el ente cuenta bancaria
+    /// </summary>
+    /// <author>jrt - 23112023</author>
     internal class CuentasDto
     {
         long idCliente;
-        string numISBAN;
-        string fechaAltaCuenta;
-        string fechaBajaCuenta;
-        string dniCliente;
+        string numISBAN ="aaaaa";
+        string fechaAltaCuenta="9999/12/31";
+        string fechaBajaCuenta= "9999/12/31";
+        string dniCliente="aaaaa";
         string idBanco = "CSI1SSXX.";
 
         public long IdCliente { get => idCliente; set => idCliente = value; }

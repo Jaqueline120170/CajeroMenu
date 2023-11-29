@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace CajeroMenu.Servicios
 {
+    /// <summary>
+    /// Clase que implementa la interfaz de menú
+    /// 21112023 - jrt
+    /// 
+    /// </summary>
     internal class CuentaImplementacion : CuentaInterfaz
     {
         public void darAltaCuenta(List<CuentasDto> listaAntigua)
@@ -15,7 +20,10 @@ namespace CajeroMenu.Servicios
             listaAntigua.Add(crearNuevaCuenta());
 
         }
-
+        /// <summary>
+        /// Dar de alta una cuenta bancaria y solicitar info para confirmar
+        /// </summary>
+        /// <returns>Nueva cuenta bancaria con la info solicitada</returns>
         private CuentasDto crearNuevaCuenta()
         {
             long idCliente;

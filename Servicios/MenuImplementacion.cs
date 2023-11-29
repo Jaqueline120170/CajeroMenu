@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CajeroMenu.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,10 +28,11 @@ namespace CajeroMenu.Servicios
             Console.WriteLine("0. Cerra aplicacion");
             Console.WriteLine("1. Darse de alta");
             Console.WriteLine("2. Ingresar dinero");
-            Console.WriteLine("3. Sacar dinero");
-            Console.WriteLine("4. Transferir dinero");
+            Console.WriteLine("3. Modificar");
+            Console.WriteLine("4. Ver lista Clientes");
             Console.WriteLine("5. Historial de operaciones");
             Console.WriteLine("6. Dar de alta una cuenta bancaria");
+            Console.WriteLine("7. Eliminar cliente");
             Console.WriteLine("################################");
             Console.WriteLine("Selecciona una opcion: ");
 
@@ -37,5 +40,13 @@ namespace CajeroMenu.Servicios
 
             return opcionIntroducida;
         }
+
+        public string pedirDni()
+        {
+            Console.WriteLine("Indica el DNI del cliente");
+            string dniCliente=Console.ReadLine();
+            return dniCliente;
+        }
+        
     }
 }

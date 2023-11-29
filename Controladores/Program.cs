@@ -55,10 +55,16 @@ namespace CajeroMenu.Controladores
                         Console.WriteLine("[INFO] - Se ejecuta caso 2");
                         break;
                     case 3:
-                        Console.WriteLine("[INFO] - Se ejecuta casi 3");
+                        Console.WriteLine("[INFO] - Se ejecuta caso 3");
+                        ci.modificarCuenta(listaClientes);
+
                         break;
                     case 4:
                         Console.WriteLine("[INFO] - Se ejecuta caso 4");
+                        foreach (ClienteDto cliente in listaClientes)
+                        {
+                            Console.WriteLine(cliente.ToString());
+                        }
                         break;
                     case 5:
                         Console.WriteLine("[INFO] - Se ejecuta caso 5");
@@ -70,6 +76,10 @@ namespace CajeroMenu.Controladores
                         {
                             Console.WriteLine(cuentaNueva.ToString());
                         }
+                        break;
+                    case 7:
+                        Console.WriteLine("[INFO] - Se ejecuta caso 7");
+                        ci.borrarCliente(listaClientes);
                         break;
                     default:
                         Console.WriteLine("[INFO] - La opcion seleccionada no coincide con ninguna");
